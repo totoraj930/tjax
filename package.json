@@ -1,6 +1,6 @@
 {
   "name": "tjax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "非同期ページ書き換えライブラリ",
   "homepage": "https://github.com/totoraj930/tjax",
   "main": "src/tjax.js",

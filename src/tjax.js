@@ -127,7 +127,6 @@ class Tjax {
         // controlScrollがtrueならstateからscrollYを取得
         if (that._options.controlScroll
             && event.state
-            && isFinite(event.state.scrollY)
         ) {
             scrollY = event.state.scrollY;
         }
@@ -152,14 +151,6 @@ class Tjax {
             document.title = dummyDoc.title;
         }
 
-        // スクロール位置を更新
-        if (this._options.controlScroll) {
-            if (isFinite(scrollY)) {
-                window.scroll(0, scrollY);
-            } else {
-                window.scroll(0, 0);
-            }
-        }
 
         // areasにあるqueryのelementを置き換える
         for (var i = 0; i < areas.length; i++) {
@@ -174,6 +165,17 @@ class Tjax {
                 this._loadScript(elm);
             }
         }
+
+        
+        // スクロール位置を更新
+        if (this._options.controlScroll) {
+            if (isFinite(scrollY)) {
+                window.scroll(0, scrollY);
+            } else {
+                window.scroll(0, 0);
+            }
+        }
+        
         this._trigger("end");
     }
 
