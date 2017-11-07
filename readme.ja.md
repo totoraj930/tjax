@@ -49,7 +49,7 @@ AjaxとpushStateを使用した非同期ページ置換JavaScriptライブラリ
 
 オプションをセットします。
 
-[Options](#Options)を参照してください。
+[Options](#options)を参照してください。
 
 ```javascript
 tjax.setOptions({

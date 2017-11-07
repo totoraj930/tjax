@@ -48,7 +48,7 @@ Asynchronous page replacement JavaScript library using Ajax and pushState.
 
 Set the option.
 
-See [Options](#Options).
+See [Options](#options).
 
 ```javascript
 tjax.setOptions({
