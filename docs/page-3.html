@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>page-3 | tjax demo</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./tjax.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+
+    <ul class="head-link">
+            <li><a href="./" data-tjax>index</a></li>
+            <li><a href="./page-1.html" data-tjax>page-1</a></li>
+            <li><a href="./page-2.html" data-tjax>page-2</a></li>
+            <li><a href="./page-3.html" data-tjax>page-3</a></li>
+    </ul>
+    
+    <div id="tjax_area">
+        <h2>"page-3.html"</h2>
+        <script type="text/javascript">
+            var target = document.querySelector("#tjax_area");
+            target.classList.value = "";
+            target.classList.add("page-3");
+        </script>
+    </div>
+</body>
+</html>

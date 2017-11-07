@@ -1,0 +1,28 @@
+{
+  "name": "tjax",
+  "version": "1.0.0",
+  "description": "非同期ページ書き換えライブラリ",
+  "homepage": "https://github.com/totoraj930/tjax",
+  "main": "src/tjax.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/totoraj930/tjax.git"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "gulp",
+    "debug-build": "gulp debug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reona Oshima (totoraj)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-header": "^1.8.9"
+  }
+}
