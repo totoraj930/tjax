@@ -31,7 +31,7 @@ body {
     width: 100%;
     min-height: 150%;
     padding: 1em;
-    background: #ffffff;
+    background: #fff;
     color: #1d1d1d;
     text-align: center;
 }
@@ -44,6 +44,10 @@ body {
     margin: 1em 0;
 }
 
+#tjax_area.index {
+    background: #fff;
+    color: #1d1d1d;
+}
 #tjax_area.page-1 {
     background: #da0d40;
     color: #fff;
