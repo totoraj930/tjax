@@ -11,7 +11,12 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "type": "npm",
+            "label": "Debug-Build",
+            "script": "debug-build",
+            "problemMatcher": []
         }
-
     ]
 }

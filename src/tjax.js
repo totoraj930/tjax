@@ -151,18 +151,27 @@ class Tjax {
             document.title = dummyDoc.title;
         }
 
-
         // areasにあるqueryのelementを置き換える
         for (var i = 0; i < areas.length; i++) {
             var query = areas[i],
-                elm = dummyDoc.querySelector(query),
-                oldElm = document.querySelector(query);
-            if (!elm || !oldElm) continue;
-            var oldElmParent = oldElm.parentNode;
-            if (!oldElmParent) continue;
-            oldElmParent.replaceChild(elm, oldElm);
+                targetElm = document.querySelector(query),
+                newElm = dummyDoc.querySelector(query);
+            if (!newElm || !targetElm) continue;
+            var oldAttrs = targetElm.attributes,
+                newAttrs = newElm.attributes;
+            // 属性を全て削除
+            for (var n = 0; n < oldAttrs.length; n++) {
+                targetElm.removeAttribute(oldAttrs[n].name);
+            }
+            // 新しい属性を設定
+            for (var n = 0; n < newAttrs.length; n++) {
+                targetElm.setAttribute(newAttrs[n].name, newAttrs[n].value);
+            }
+            // HTMLを書き換え
+            targetElm.innerHTML = newElm.innerHTML;
+            // scriptを読み込み
             if (this._options.loadScript) {
-                this._loadScript(elm);
+                this._loadScript(targetElm);
             }
         }
 
