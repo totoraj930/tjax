@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const babel = require("gulp-babel");
+const uglify = require("gulp-uglify");
 const header = require("gulp-header");
 // using data from package.json 
 var pkg = require("./package.json");
@@ -15,9 +16,10 @@ gulp.task("default", () => {
         "src/**/*.js"])
         .pipe(babel({
             presets: ["env"],
-            minified: true,
+            // minified: true,
             comments: false
         }))
+        .pipe(uglify())
         .pipe(header(banner, {pkg: pkg}))
         .pipe(gulp.dest("dest"))
         .pipe(gulp.dest("docs"));

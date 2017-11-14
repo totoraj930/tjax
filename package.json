@@ -1,6 +1,6 @@
 {
   "name": "tjax",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "非同期ページ書き換えライブラリ",
   "homepage": "https://github.com/totoraj930/tjax",
   "main": "src/tjax.js",
@@ -23,6 +23,7 @@
     "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
-    "gulp-header": "^1.8.9"
+    "gulp-header": "^1.8.9",
+    "gulp-uglify": "^3.0.0"
   }
 }
